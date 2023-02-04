@@ -53,6 +53,7 @@ async function searchForShowAndDisplay() {
   const shows = await getShowsByTerm(term);
 
   populateShows(shows);
+  $("#search-query").val('');
 }
 
 $searchForm.on("submit", async function (evt) {
